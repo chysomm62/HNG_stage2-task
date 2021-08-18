@@ -39,6 +39,7 @@ body {
   background-color: var(--white);
   font-family: "Ubuntu", sans-serif;
   max-width: 100%;
+  width: 100%;
   overflow-x: hidden;
 }
 
