@@ -107,7 +107,7 @@ ul {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 100%;
   background-color: var(--light);
   margin: 0 auto;
   padding: 1rem;
@@ -357,6 +357,9 @@ footer .footer-links li img {
 LARGE SCREEN DEVICES
 """""""""""""""""""""""""""""""""""""""""""""" */
 @media screen and (min-width: 700px) {
+  .container {
+    max-width: 900px;
+  }
   main {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
