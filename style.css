@@ -117,13 +117,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
   font-size: 1rem;
 }
 
 header .my-logo {
   font-weight: 600;
   font-style: italic;
+  cursor: pointer;
 }
 
 header span:first-of-type {
@@ -159,10 +160,28 @@ header span.slash {
   animation: border 5s linear 1s infinite alternate;
 }
 
+.hire-link:hover {
+  background-color: white;
+}
+
 .grid-item {
   margin: 0.35rem;
   padding: 1rem 0.75rem;
   line-height: 1.2;
+}
+
+.grid1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid2 p {
+  padding: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.05rem;
+  font-size: 1rem;
 }
 
 .grid-item ul {
@@ -224,7 +243,8 @@ header span.slash {
 
 .grid-item h3 {
   font-family: "Andada Pro", serif;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .grid1 p {
@@ -239,8 +259,34 @@ header span.slash {
   color: var(--white);
 }
 
+section.grid4 .skills {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 22% 22% 22% 22%;
+  row-gap: 3%;
+}
+
+section.grid4 .skills li {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.grid6 ul .skill-heading {
+  font-weight: 600;
+}
+
+.grid6 ul li span {
+  display: block;
+  padding: 0.25rem 0;
+}
+
 footer {
-  padding: 0.75rem 0.25rem;
+  padding: 1rem 0.25rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -303,4 +349,52 @@ footer .footer-links li img {
 
 .svg:hover {
   fill: red;
+}
+
+/* """""""""""""""""""""""""""""""""""""""""""""
+LARGE SCREEN DEVICES
+"""""""""""""""""""""""""""""""""""""""""""""" */
+@media screen and (min-width: 700px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    grid-auto-rows: minmax(100px, auto);
+  }
+  .grid1 {
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  .grid4 {
+    grid-column-start: 4;
+    grid-column-end: span 2;
+    grid-row-start: 1;
+    grid-row-end: span 1;
+  }
+  .grid3 {
+    grid-column-start: 3;
+    grid-column-end: span 3;
+  }
+  .grid2 {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    grid-row-start: 2;
+  }
+  .grid5 {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+  }
+  .grid6 {
+    grid-column-start: 3;
+    grid-column-end: span 3;
+  }
+  footer .footer-links {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 50% 50%;
+    padding: 1rem;
+    min-width: 100%;
+  }
 }
