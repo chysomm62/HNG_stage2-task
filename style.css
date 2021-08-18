@@ -50,12 +50,12 @@ a {
 }
 
 /* Make images easier to work with */
-img,
+/* img,
 picture,
 label {
   max-width: 100%;
   display: block;
-}
+} */
 
 /* Inherit fonts for inputs and buttons */
 input,
@@ -98,14 +98,15 @@ ul {
   --yellow1: hsl(59, 91%, 46%);
   --yellow2: hsl(39, 96%, 44%);
   --black: hsl(36, 92%, 19%);
-  --white: hsl(298, 65%, 92%);
+  --white: rgb(248, 248, 188);
+  --light: hsl(298, 65%, 92%);
   --light-red: hsl(308, 81%, 75%);
   --dark-red: hsl(0, 79%, 16%);
 }
 
 .container {
   max-width: 900px;
-  background-color: inherit;
+  background-color: var(--light);
   margin: 0 auto;
   padding: 1rem;
   text-align: center;
@@ -246,6 +247,25 @@ footer {
   align-items: center;
 }
 
+footer .footer-links {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 50% 50%;
+  padding: 1rem;
+  min-width: 100%;
+}
+
+footer .footer-links li {
+  padding: 1rem;
+}
+
+footer .footer-links li a,
+footer .footer-links li img {
+  max-width: 2rem;
+  height: auto;
+  color: rgb(102, 84, 3);
+}
+
 /* @supports (background-clip: text) {
   .grid1 h1 {
     background-image: linear-gradient(60deg, #e21143, #ffb03a);
@@ -279,4 +299,8 @@ footer {
     border-right: 0.2rem solid var(--light-red);
     border-bottom: 0.2rem solid var(--yellow2);
   }
+}
+
+.svg:hover {
+  fill: red;
 }
