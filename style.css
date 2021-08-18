@@ -36,9 +36,8 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-size: 0.8125rem;
-  font-family: "Barlow Semi Condensed", sans-serif;
   background-color: var(--white);
-  /* font-family: "Ubuntu", sans-serif; */
+  font-family: "Ubuntu", sans-serif;
 }
 
 /* A elements that don't have a class get default styles */
@@ -97,9 +96,12 @@ label {
 :root {
   --neon-blue: hsl(187, 95%, 34%);
   --yellow: hsl(51, 96%, 56%);
-  --yellow2: hsl(51, 91%, 40%);
+  --yellow1: hsl(59, 91%, 46%);
+  --yellow2: hsl(39, 96%, 44%);
   --black: hsl(93, 77%, 7%);
   --white: hsl(298, 65%, 92%);
+  --light-red: hsl(308, 81%, 75%);
+  --dark-red: hsl(0, 79%, 16%);
 }
 
 .container {
@@ -111,7 +113,9 @@ label {
 }
 
 .grid-item {
-  margin: 0.25rem;
+  margin: 0.35rem;
+  padding: 1rem 0.75rem;
+  line-height: 1.2;
 }
 
 .grid1,
@@ -121,18 +125,44 @@ label {
   color: var(--yellow);
 }
 
+.grid2,
+.grid4,
+.grid6 {
+  background-color: var(--light-red);
+  color: var(--dark-red);
+}
+
 .grid1 h1 {
   font-size: 2.5rem;
+  padding: 0.5rem 0;
+  background: -webkit-linear-gradient(80deg, var(--yellow1), var(--yellow2));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Andada Pro", serif;
 }
 
-.grid-item .grid1 h1 {
-  color: pink;
+.grid-item h3 {
+  font-family: "Andada Pro", serif;
+  font-size: 1.2rem;
 }
 
-@supports (background-clip: text) {
-  .grid-item .grid1 h1 {
+.grid1 p {
+  color: var(--white);
+  font-weight: 600;
+  padding: 0.5rem;
+  letter-spacing: 0.35rem;
+}
+
+.grid3 h3,
+.grid5 h3 {
+  color: var(--white);
+}
+
+/* @supports (background-clip: text) {
+  .grid1 h1 {
     background-image: linear-gradient(60deg, #e21143, #ffb03a);
     background-clip: text;
-    color: transparent;
+    color: red;
   }
-}
+} */
