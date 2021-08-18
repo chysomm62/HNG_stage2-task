@@ -49,11 +49,6 @@ a {
   color: inherit;
 }
 
-ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
 /* Make images easier to work with */
 img,
 picture,
@@ -98,7 +93,7 @@ label {
   --yellow: hsl(51, 96%, 56%);
   --yellow1: hsl(59, 91%, 46%);
   --yellow2: hsl(39, 96%, 44%);
-  --black: hsl(93, 77%, 7%);
+  --black: hsl(36, 92%, 19%);
   --white: hsl(298, 65%, 92%);
   --light-red: hsl(308, 81%, 75%);
   --dark-red: hsl(0, 79%, 16%);
@@ -112,10 +107,79 @@ label {
   text-align: center;
 }
 
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+header .my-logo {
+  font-weight: 600;
+  font-style: italic;
+}
+
+header span:first-of-type {
+  color: var(--yellow2);
+}
+
+header .my-logo .name {
+  background: -webkit-linear-gradient(180deg, rgb(59, 3, 3), rgb(102, 102, 5));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Andada Pro", serif;
+}
+
+header span:last-of-type {
+  color: rgb(75, 3, 3);
+}
+
+header span.slash {
+  color: rgb(119, 56, 4);
+}
+
+.hire-link {
+  outline: none;
+  padding: 0.5rem;
+  letter-spacing: 0.25rem;
+  color: rgb(44, 65, 9);
+  font-weight: 600;
+  border-top: 0.2rem solid var(--yellow1);
+  border-right: 0.2rem solid var(--dark-red);
+  border-bottom: 0.2rem solid var(--light-red);
+  border-left: 0.2rem solid var(--yellow2);
+  animation: border 5s linear 1s infinite alternate;
+}
+
 .grid-item {
   margin: 0.35rem;
   padding: 1rem 0.75rem;
   line-height: 1.2;
+}
+
+.grid-item ul {
+  text-align: left;
+  list-style-type: none;
+  padding: 0.25rem 1rem;
+}
+
+.grid-item ul li {
+  padding: 0.25rem 0.5rem;
+  text-align: left;
+}
+
+.grid-item ul.second-ul {
+  list-style-type: circle;
+  margin-left: 0rem;
+}
+
+.grid-item ul .first-li {
+  border-left: 2px solid var(--yellow1);
+  margin: 1rem 0.5rem;
+  padding: 0 1rem;
 }
 
 .grid1,
@@ -129,7 +193,15 @@ label {
 .grid4,
 .grid6 {
   background-color: var(--light-red);
+  color: var(--black);
+}
+
+.grid2 h3,
+.grid4 h3,
+.grid6 h3 {
   color: var(--dark-red);
+  padding: 0.5rem 0;
+  font-weight: 600;
 }
 
 .grid1 h1 {
@@ -140,6 +212,7 @@ label {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Andada Pro", serif;
+  font-weight: 700;
 }
 
 .grid-item h3 {
@@ -166,3 +239,30 @@ label {
     color: red;
   }
 } */
+
+@keyframes border {
+  0% {
+    border-top: 0.2rem solid var(--yellow1);
+    border-right: 0.2rem solid var(--dark-red);
+    border-bottom: 0.2rem solid var(--light-red);
+    border-left: 0.2rem solid var(--yellow2);
+  }
+  35% {
+    border-right: 0.2rem solid var(--yellow1);
+    border-bottom: 0.2rem solid var(--dark-red);
+    border-left: 0.2rem solid var(--light-red);
+    border-top: 0.2rem solid var(--yellow2);
+  }
+  70% {
+    border-bottom: 0.2rem solid var(--yellow1);
+    border-left: 0.2rem solid var(--dark-red);
+    border-top: 0.2rem solid var(--light-red);
+    border-right: 0.2rem solid var(--yellow2);
+  }
+  100% {
+    border-left: 0.2rem solid var(--yellow1);
+    border-top: 0.2rem solid var(--dark-red);
+    border-right: 0.2rem solid var(--light-red);
+    border-bottom: 0.2rem solid var(--yellow2);
+  }
+}
