@@ -87,6 +87,10 @@ label {
   }
 }
 
+ul {
+  list-style-type: none;
+}
+
 /* variable */
 :root {
   --neon-blue: hsl(187, 95%, 34%);
@@ -174,12 +178,14 @@ header span.slash {
 .grid-item ul.second-ul {
   list-style-type: circle;
   margin-left: 0rem;
+  font-weight: 400;
 }
 
 .grid-item ul .first-li {
   border-left: 2px solid var(--yellow1);
   margin: 1rem 0.5rem;
   padding: 0 1rem;
+  font-weight: 500;
 }
 
 .grid1,
@@ -230,6 +236,14 @@ header span.slash {
 .grid3 h3,
 .grid5 h3 {
   color: var(--white);
+}
+
+footer {
+  padding: 0.75rem 0.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* @supports (background-clip: text) {
