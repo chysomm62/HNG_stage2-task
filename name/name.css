@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  min-width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(210, 243, 118);
+}
+
+.name {
+  font-size: 2rem;
+  font-family: cursive;
+  font-weight: 600;
+}
