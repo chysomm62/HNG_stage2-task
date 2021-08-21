@@ -102,7 +102,7 @@ ul {
   --black: hsl(36, 92%, 19%);
   --white: rgb(248, 248, 188);
   --light: hsl(298, 65%, 92%);
-  --light-red: hsl(308, 81%, 75%);
+  --light-red: hsl(308, 62%, 60%);
   --dark-red: hsl(0, 79%, 16%);
 }
 
@@ -402,5 +402,39 @@ LARGE SCREEN DEVICES
     grid-template-rows: 50% 50%;
     padding: 1rem;
     min-width: 100%;
+  }
+}
+
+.top-link {
+  font-size: 1.25rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background: rgba(49, 32, 32, 0.39);
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: rgb(233, 203, 203);
+  animation: bounce 2s ease-in-out infinite;
+
+  visibility: hidden;
+  z-index: -100;
+}
+.show-link {
+  visibility: visible;
+  z-index: 100;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
   }
 }
