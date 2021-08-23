@@ -95,15 +95,15 @@ ul {
 
 /* variable */
 :root {
-  --neon-blue: hsl(187, 95%, 34%);
+  --neon-blue: hsl(187, 95%, 14%);
   --yellow: hsl(51, 96%, 56%);
   --yellow1: hsl(59, 91%, 46%);
   --yellow2: hsl(39, 96%, 44%);
   --black: hsl(36, 92%, 19%);
-  --white: rgb(241, 241, 223);
-  --light: hsl(295, 31%, 86%);
-  --light-red: hsl(308, 62%, 60%);
-  --dark-red: hsl(0, 79%, 16%);
+  --white: rgb(70, 70, 52);
+  --light: hsl(300, 5%, 22%);
+  --light-red: hsl(182, 81%, 75%);
+  --dark-red: hsl(187, 95%, 14%);
 }
 
 .container {
@@ -135,7 +135,11 @@ header span:first-of-type {
 }
 
 header .my-logo .name {
-  background: -webkit-linear-gradient(180deg, rgb(59, 3, 3), rgb(102, 102, 5));
+  background: -webkit-linear-gradient(
+    180deg,
+    rgb(155, 7, 7),
+    rgb(182, 182, 10)
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -143,18 +147,18 @@ header .my-logo .name {
 }
 
 header span:last-of-type {
-  color: rgb(75, 3, 3);
+  color: rgb(150, 7, 7);
 }
 
 header span.slash {
-  color: rgb(119, 56, 4);
+  color: rgb(167, 79, 7);
 }
 
 .hire-link {
   outline: none;
   padding: 0.5rem;
   letter-spacing: 0.25rem;
-  color: rgb(44, 65, 9);
+  color: rgb(110, 163, 24);
   font-weight: 600;
   border-top: 0.2rem solid var(--yellow1);
   border-right: 0.2rem solid var(--dark-red);
@@ -179,6 +183,10 @@ header span.slash {
   justify-content: center;
   align-items: center;
   min-height: 70vh;
+  background: url(./images/fabian-irsara-67l-QujB14w-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
 }
 
 .grid2 p {
@@ -255,7 +263,7 @@ header span.slash {
   color: var(--white);
   font-weight: 600;
   padding: 0.5rem;
-  letter-spacing: 0.35rem;
+  letter-spacing: 0.15rem;
 }
 
 .grid3 h3,
@@ -310,15 +318,16 @@ footer .footer-links li {
 }
 
 footer .footer-links li a,
-footer .footer-links li img {
+footer .footer-links li i {
   max-width: 2rem;
+  font-size: 2rem;
   height: auto;
-  color: rgb(102, 84, 3);
+  color: rgb(212, 176, 16);
 }
 
-footer .footer-links li img:hover,
-footer div img:hover,
-.skills .skill-li img:hover {
+footer .footer-links li i:hover,
+footer div i:hover,
+.skills .skill-li i:hover {
   animation: bounce 2s ease-in-out 2;
 }
 
@@ -355,10 +364,6 @@ footer div img:hover,
     border-right: 0.2rem solid var(--light-red);
     border-bottom: 0.2rem solid var(--yellow2);
   }
-}
-
-.svg:hover {
-  fill: red;
 }
 
 /* """""""""""""""""""""""""""""""""""""""""""""
@@ -405,7 +410,7 @@ LARGE SCREEN DEVICES
   }
   footer .footer-links {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 50% 50%;
     padding: 1rem;
     min-width: 100%;
@@ -443,4 +448,9 @@ LARGE SCREEN DEVICES
   100% {
     transform: scale(1);
   }
+}
+
+.skill-li i {
+  font-size: 3em;
+  color: var(--neon-blue);
 }
